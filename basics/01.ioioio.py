@@ -1,3 +1,3 @@
-imie = input("Podaj imię")
+name = input("Plea gib name")
 
-print(imie)
+print(name)
