@@ -1,3 +1,3 @@
-name = input("Plea gib name")
+name = input("Pls gib name")
 
 print(name)
