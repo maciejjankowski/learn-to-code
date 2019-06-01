@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html>
-  
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Obernews</title>
-</head>
-  
-<body>
-    <style>
-      .signature::before{
-        content: "with ♥";
-        margin-right: 0.5em;
-        color: salmon;
-      }
-      
-      .signature {
-        font-weight: bold;
-        font-style: italic;
-        margin-left: 2em;
+.signature::before{
+  content: "with ♥";
+  margin-right: 0.5em;
+  color: salmon;
+}
 
-      }
-  </style>
-<h1>
-  News of the day: fake news are coming
-</h1>
-  It's no joke. It's all about fake news clickbait 
-ad-serving self-sustaining nonsense.
-  <div class="signature">Ronald Drumph</div>
-</body>
-</html>
+.signature {
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 2em;
+}
