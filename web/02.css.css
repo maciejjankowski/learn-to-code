@@ -9,3 +9,11 @@
   font-style: italic;
   margin-left: 2em;
 }
+
+#specifically {
+  border: 3px dashed blueviolet;
+}
+
+body {
+  background-color: beige;
+}

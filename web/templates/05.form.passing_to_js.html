@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Obernews</title>
+  <link rel="stylesheet" href="00.css.css">
+</head>
+  
+<body>
+
+<form name="passing_data">
+  <input type="hidden" name="passed_data_hidden" value="{{passed_data}}">
+  <input type="text" name="passed_data_field" value="{{passed_data}}">
+</form>
+
+<div id="passed_data_element" data-passed_data_ds="{{passed_data}}"></div>
+
+<script>
+  function showPassedData(){
+    let fromScript = "{{ data_from_python}}";
+
+    let fromForm = forms['passing_data'].passed_data_hidden;
+    
+    let fromDataset = document
+      .getElementById('passed_data_element')
+      .dataset['passed_data_ds'];
+
+    console.log("from form", fromForm);
+    console.log("from script", fromScript);
+    console.log("from dataset", fromDataset);
+  }
+
+  showPassedData()
+</script>
+
+</body>
+</html>
