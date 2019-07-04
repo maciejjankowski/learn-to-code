@@ -13,15 +13,10 @@ def hello_again(name=None):
 
 @app.route('/vote', method = ['POST', 'GET'])
 def vote():
-
   if request.method == 'POST':
     result = request.form
     return render_template('thanks.html', result=result)
   else:
-    return render_template('04.form.html', result=result)
-    
-    
-
-
+    return render_template('03.form.get_post.html', result=result)
 
 app.run()

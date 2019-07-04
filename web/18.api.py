@@ -6,5 +6,3 @@ result = resp.json()
 print("zwrotka", result)
 print("waluta", result['currency'])
 print("wartosc", result['rates'][0]['ask'])
-
-
