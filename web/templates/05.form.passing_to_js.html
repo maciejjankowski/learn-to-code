@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>Obernews</title>
   </head>
-
   <body>
 <!-- Method 1 -->
 
@@ -45,10 +44,39 @@ from dataset: ${fromDataset}`;
         let outputElement = document
           .getElementById('output')
           .innerHTML = outputString;
-
       }
 
       showPassedData();
     </script>
+
+<!-- method 4 -->
+<script type="application/json" id="dane">
+{"Paweł": "Rzondzi!"}
+</script>
+  
+  <div id="testOutput"></div>
+  
+  <script>
+(function(){
+  function readJSONDataFromElement(id){
+    let element = document.getElementById(id);
+    let dane = null;
+    if (!element) 
+      throw new Error('element not found for given id');
+    try{
+      dane = JSON.parse(element.innerHTML);
+    } catch(e){
+      throw new Error("Problem parsing JSON data. Are you sure it's JSON?")
+    }
+
+    return dane;
+  }
+
+let dane = readJSONDataFromElement('dane');
+document.getElementById('testOutput').innerHTML = dane["Paweł"];
+})();
+  </script>
+
+
   </body>
 </html>
