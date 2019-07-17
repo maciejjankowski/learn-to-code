@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width" />
     <title>Obernews</title>
   </head>
+
   <body>
-    <!-- Method 1 -->
-    <form name="passing_data">
-      <input type="hidden" name="passed_data_hidden" value="{{ passed_data }}" />
-      <input type="text" name="passed_data_text" value="{{ passed_data }}" />
-    </form>
-    
-    <!-- Method 2 -->
-    <div 
-        id="passed_data_element"
-        data-passed_data_ds="{{ passed_data }}">
-    </div>
+<!-- Method 1 -->
+
+<form name="passing_data">
+  <input type="hidden" name="passed_data_hidden" value="{{passed_data}}">
+  <input type="text" name="passed_data_field" value="{{passed_data}}">
+</form>
+
+<div id="passed_data_element" data-passed_data_ds="{{passed_data}}"></div>
 
 <pre id="output"></pre>
 
@@ -39,7 +37,6 @@
         console.log('from form', fromForm);
         console.log('from script', fromScript);
         console.log('from dataset', fromDataset);
-
 
         let outputString = `from form: ${fromForm}
 from script: ${fromScript}
