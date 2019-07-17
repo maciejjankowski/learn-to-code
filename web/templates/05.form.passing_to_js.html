@@ -21,7 +21,7 @@
   function showPassedData(){
     let fromScript = "{{ data_from_python}}";
 
-    let fromForm = forms['passing_data'].passed_data_hidden;
+    let fromForm = document.forms['passing_data'].passed_data_hidden.value;
     
     let fromDataset = document
       .getElementById('passed_data_element')
