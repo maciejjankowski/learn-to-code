@@ -1,9 +1,11 @@
 name = input("Pls gib name ")
 
 if name == 'Adam':
+
   for i in range(3):
     print(i, " hip!")
   print("hurray!")
+  
 else:
   print("oh, hi " + name)
 
