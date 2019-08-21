@@ -1,30 +1,57 @@
+"""
+Conway's Game of Life
+Imagine a grid where you randomly place cells and then observe 
+how they grow according to the rules:
+
+Cell with less than 2 neighbors dies
+Cell with more than 3 neighbors dies
+Empty space with exactly 3 neighbors comes to life as a new cell
+"""
+
 # python -m doctest
+
 import random
 import time
-import copy
-from functools import reduce
 
-DEAD = 0  
+EMPTY = 0  
 ALIVE = 1
-LABEL = {0 :  ' ', 1 : '▮' }
 
-def get_board_text(board):
-  """
-  >>> get_board_text([[DEAD, DEAD],[DEAD, DEAD]])
-  '  \\n  \\n'
-  """
-  board_text = ''
-  for row in board:
-    board_text += ''.join([LABEL[cell] for cell in row]) + '\n'
-  return board_text
+board = [
+  [EMPTY, ALIVE, EMPTY],
+  [EMPTY, ALIVE, EMPTY],
+  [EMPTY, ALIVE, EMPTY]
+]
 
-def is_empty(board):
-  """
-  >>> is_empty([[0, 0], [0, 0]])
-  True
-  """
-  return not sum(reduce(lambda x, y: x + y, board))
+def nothing_serious():
+  print(board)
+  print(board[0][0])
 
+# nothing_serious()
+# exit()
+
+
+
+
+
+
+def prepare_new_board(board, w=15, h=15, randomly=True):
+  """
+  Create a new board filled with random values
+  >>> prepare_new_board([], 2, 2, randomly=False)
+  [[0, 0], [0, 0]]
+  """
+
+  for i in range(h):
+    board.append([])
+
+  for i in range(h):
+    for j in range(w):
+      if randomly:
+        cell_value = random.choice([EMPTY, ALIVE])
+      else:
+        cell_value = EMPTY
+      board[i].append(cell_value)
+  return board
 
 def display_board(board):
   board_text = get_board_text(board)
@@ -32,50 +59,52 @@ def display_board(board):
 
 def update_board(board):
   """
-  >>> update_board([[DEAD, DEAD], [DEAD, DEAD]])
+  updates all cells based on GOL rules
+
+  tests:
+  >>> update_board([[EMPTY, EMPTY], [EMPTY, EMPTY]])
   [[0, 0], [0, 0]]
   >>> update_board([[ALIVE, ALIVE], [ALIVE, ALIVE]])
   [[1, 1], [1, 1]]
   >>> update_board([[ALIVE, ALIVE, ALIVE], [ALIVE, ALIVE, ALIVE], [ALIVE, ALIVE, ALIVE]])
   [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
   """
-  new_board = copy.deepcopy(board)
   for (rowNo, row) in enumerate(board):
     for (cellNo, cell) in enumerate(row):
       if neighbours_count(board, rowNo, cellNo) > 3:
-        new_board[rowNo][cellNo] = DEAD
+        board[rowNo][cellNo] = EMPTY
       if neighbours_count(board, rowNo, cellNo) < 2:
-        new_board[rowNo][cellNo] = DEAD
+        board[rowNo][cellNo] = EMPTY
       if neighbours_count(board, rowNo, cellNo) == 3:
-        new_board[rowNo][cellNo] = ALIVE
-  return new_board
+        board[rowNo][cellNo] = ALIVE
+  return board
 
 def neighbours_count(board, rowNo, cellNo):
   """
   >>> neighbours_count([\
-                        [DEAD, DEAD, DEAD],\
-                        [DEAD, DEAD, DEAD],\
-                        [DEAD, DEAD, DEAD]], 1, 1)
+                        [EMPTY, EMPTY, EMPTY],\
+                        [EMPTY, EMPTY, EMPTY],\
+                        [EMPTY, EMPTY, EMPTY]], 1, 1)
   0
   >>> neighbours_count([\
-                        [DEAD, ALIVE, DEAD],\
-                        [DEAD, DEAD, DEAD],\
-                        [DEAD, DEAD, DEAD]], 1, 1)
+                        [EMPTY, ALIVE, EMPTY],\
+                        [EMPTY, EMPTY, EMPTY],\
+                        [EMPTY, EMPTY, EMPTY]], 1, 1)
   1
   >>> neighbours_count([\
                         [ALIVE, ALIVE, ALIVE],\
-                        [ALIVE, DEAD, ALIVE],\
+                        [ALIVE, EMPTY, ALIVE],\
                         [ALIVE, ALIVE, ALIVE]], 1, 1)
   8
   >>> neighbours_count([\
-                        [ALIVE, ALIVE, ALIVE],\
+                        [EMPTY, ALIVE, ALIVE],\
                         [ALIVE, ALIVE, ALIVE],\
                         [ALIVE, ALIVE, ALIVE]], 0, 0)
   3
   >>> neighbours_count([\
                         [ALIVE, ALIVE, ALIVE],\
                         [ALIVE, ALIVE, ALIVE],\
-                        [ALIVE, ALIVE, ALIVE]], 2, 2)
+                        [ALIVE, ALIVE, EMPTY]], 2, 2)
   3
   """
   sum = 0
@@ -105,31 +134,28 @@ def neighbours_count(board, rowNo, cellNo):
   
   return sum
 
-
-def init_board(board, w=15, h=15, randomly=True):
+def get_board_text(board):
   """
-  >>> init_board([], 2, 2, randomly=False)
-  [[0, 0], [0, 0]]
+  transforms a board into text which can be displayed
+
+  >>> get_board_text([[EMPTY, EMPTY],[EMPTY, EMPTY]])
+  '  \\n  \\n'
   """
+  LABEL = {0 :  ' ', 1 : '#' }
+  board_text = ''
+  for row in board:
+    board_text += ''.join([LABEL[cell] for cell in row]) + '\n'
 
-  for i in range(h):
-    board.append([])
-    for j in range(w):
-      if randomly:
-        cell_value = random.choice([DEAD, ALIVE])
-      else:
-        cell_value = DEAD
-      board[i].append(cell_value)
-  return board
-
+  return board_text
 
 def main():
   board = []
-  init_board(board)
-  while not is_empty(board):
+  prepare_new_board(board)
+  while True:
     display_board(board)
-    board = update_board(board)
-    time.sleep(0.1)
+    update_board(board)
+    time.sleep(0.5)
+
 
 if __name__ == '__main__':
   main()
