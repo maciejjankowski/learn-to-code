@@ -11,12 +11,14 @@ def hello():
 def hello_again(name=None):
     return render_template('hello.html', signature=name)
 
-@app.route('/vote', method = ['POST', 'GET'])
+@app.route('/vote', methods = ['POST', 'GET'])
 def vote():
+  result = ''
   if request.method == 'POST':
     result = request.form
     return render_template('thanks.html', result=result)
   else:
     return render_template('03.form.get_post.html', result=result)
 
-app.run()
+if __name__ == '__main__':
+  app.run()

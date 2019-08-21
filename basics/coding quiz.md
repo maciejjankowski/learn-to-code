@@ -1,24 +1,24 @@
 # Overview
-check coding basics
-variable, what is, how use
+## check coding basics
+
+* variable, what is, how use
 what would happen:
 42 = x
 x = 42
 x = x + 5
 
-how to see the value? print
+* how to check the variable's value? print
 
-how to get value from user? input
+* how to get value from user? input
 
-what if array= [1,2,3]
+* array= [1,2,3]
 array[1] = ?
 
-dictionary
+* dictionary
 
+* if, else
 
-if, else
-
-loop - for, while - how to use? what if
+* loop - for, while - how to use? what if
 ````java
 for int i=0; i< 10;i++
   print i
