@@ -12,8 +12,8 @@ Plik źródłowy - ...
 Wcięcia i składnia ---
 
 # handouts + omówienie live coding
-
-* podstawy składni znajdziesz tutaj: https://learnxinyminutes.com/docs/python3/
+* przejrzyj [zestaw mikro-ćwiczeń](https://github.com/maciejjankowski/learn-to-code/tree/master/basics)
+* więcej info o składni znajdziesz tutaj: https://learnxinyminutes.com/docs/python3/
 * zestaw podstawowej wiedzy na kartkach:
 	* podstawowe operacje, instrukcje, wyrażenia, na podstawie learn x in y
 	* i/o: input, print, file, csv, requests get/post
