@@ -1,6 +1,6 @@
-While True:
+while True:
   imię = input("who you?")
-  if imię = "Adam":
+  if imię == "Adam":
     print("oh, you again?")
     break
   print("hello", imię)

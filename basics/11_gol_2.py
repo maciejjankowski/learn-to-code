@@ -91,7 +91,6 @@ def neighbours_count(board, rowNo, cellNo):
 def get_board_text(board):
   """
   transforms a board into text which can be displayed
-
   >>> get_board_text([[EMPTY, EMPTY],[EMPTY, EMPTY]])
   '  \\n  \\n'
   """

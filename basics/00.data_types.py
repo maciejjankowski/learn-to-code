@@ -10,19 +10,17 @@ print(powitanie)
 
 wiek = 25
 
-print(f"{imie} ma {wiek} lat i {w_kieszeni} zł w kieszeni")
-
 w_kieszeni = 3.50
+
+print(f"{imie} ma {wiek} lat i {w_kieszeni} zł w kieszeni")
 
 goscie = ["Paula", "Aga", "Kamil"]
 
 goscie[0]
 goscie[1]
 
-
-
 studentka = {
-        "imie" : "Dżesika",
+        "imie" : "Oksana",
         "wiek" : 20,
-        "zainteresowania": ["imprezy", "chłopaki", "takie takie"]
+        "zainteresowania": ["dyskoteki", "chłopaki", "ogólnie takie takie", "ale w miarę to nauka mnie najbardziej kręci"]
         }

@@ -122,7 +122,7 @@ def prepare_new_board(w=15, h=15, randomly=True):
   >>> prepare_new_board(3, 3, randomly=False)
   [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
   """
-
+  board = []
   for i in range(h):
     board.append([])
     for j in range(w):
@@ -136,7 +136,7 @@ def prepare_new_board(w=15, h=15, randomly=True):
 
 def main():
   board = []
-  board = init_board()
+  board = prepare_new_board()
   while not is_empty(board):
     display_board(board)
     board = update_board(board)

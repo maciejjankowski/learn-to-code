@@ -30,11 +30,14 @@ print(board[0][0] == ALIVE)
 print(board[0][1] == ALIVE)
 
 
+def prepare_new_board():
+  pass
 
-exit();
+def display_board():
+  pass
 
-
-
+def update_board():
+  pass
 
 
 def main():
@@ -43,6 +46,7 @@ def main():
     display_board(board)
     update_board(board)
     time.sleep(0.5)
+    break # execute the loop only once (for testing only)
 
 
 if __name__ == '__main__':
