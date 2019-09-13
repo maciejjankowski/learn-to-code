@@ -50,5 +50,9 @@ to be applicable), while a function doesn’t necessarily.
 # All python built-in functions: 
 # https://docs.python.org/3/library/functions.html
 
+# Python language reference (all the things)
+# https://docs.python.org/3/reference/index.html
 
+# Python standard library (functions, data structures, modules, etc.)
+# https://docs.python.org/3/library/index.html#library-index
 
