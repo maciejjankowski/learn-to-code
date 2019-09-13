@@ -11,6 +11,7 @@ print(powitanie)
 wiek = 25
 
 w_kieszeni = 3.50
+print(type(w_kieszeni))
 
 print(f"{imie} ma {wiek} lat i {w_kieszeni} zł w kieszeni")
 

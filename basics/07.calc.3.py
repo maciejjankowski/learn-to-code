@@ -33,14 +33,21 @@ wyswietl_wynik(9)
 def wprowadz_liczby():
   pass
 
-# wersja 1. Najprostsza. Nie działa, ale pobiera i zwraca poprawne dane
+# Wersja 3. Prawie gotowa. 
+# Jak wykonać instrukcję w zalezności od podanej operacji?
 def wykonaj_operacje(liczba1, liczba2, operacja):
-  wynik = 0
+  wynik = liczba1 + liczba2
+  wynik = liczba1 - liczba2
+  wynik = liczba1 * liczba2
+  wynik = liczba1 / liczba2
   return wynik
 
   # od razu sprawdzamy
 wynik = wykonaj_operacje(1, 2, '+')
 print(wynik)
+
+
+
 
 
 
