@@ -3,3 +3,4 @@
 
 
 ## Super fajne warsztaty z programowania ;)
+* instalacja rzeczy
