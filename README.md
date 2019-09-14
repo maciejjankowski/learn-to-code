@@ -6,3 +6,4 @@
 * kahoot
 * live coding
 * coding dojo
+* instalacja rzeczy
