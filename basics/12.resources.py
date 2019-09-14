@@ -46,6 +46,8 @@ Namely: a method always belongs to an object
 to be applicable), while a function doesn’t necessarily. 
 """
 
+# all python syntax in one place: 
+# https://learnxinyminutes.com/docs/python3/
 
 # All python built-in functions: 
 # https://docs.python.org/3/library/functions.html
