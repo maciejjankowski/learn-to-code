@@ -3,3 +3,6 @@
 
 
 ## Super fajne warsztaty z programowania ;)
+* kahoot
+* live coding
+* coding dojo
