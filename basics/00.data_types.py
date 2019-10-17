@@ -1,10 +1,12 @@
-# more info: https://learnxinyminutes.com/docs/python3/
+# comment more info: https://learnxinyminutes.com/docs/python3/
 
+# assignment
 imie = "Adam"
 
 print(imie[0])
 
-powitanie = "Cześć " + imie + "!"
+# An expression: combining some variables together. Expression has a value that can be used 
+powitanie = "Cześć " + imie + "!" 
 
 print(powitanie)
 
