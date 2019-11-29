@@ -3,20 +3,21 @@ var year = new Date().toDateString().split(' ')[3];
 
 var projectDescription = document.querySelector('#user_field').innerText;
 var phoneNumber, clientName;
+var projectTitle = document.querySelector('.cardOrderName').innerText;
 
 pubsub.subscribe('cardactions:contentloaded', function() {
-  let contactDetails = Array.from(
+  let contactDetails = (Array.from(
     document.querySelectorAll('.cardActionsContactMethod td')
   )
-    .map(e => e.innerText)
+    .map(e => e.innerText.trim())
     .filter(e => e)
-    .filter(e => e !== 'Telefon:');
-  [clientName, phoneNumber] = contactDetails;
+    .filter(e => e !== 'Telefon:')[(clientName, phoneNumber)] = contactDetails);
   prompt(
     '',
     JSON.stringify({
       clientName,
       phoneNumber,
+      projectTitle,
       projectDescription
     })
   );
