@@ -1,0 +1,12 @@
+- 9:00 | wstęp / agenda | 15m
+- 9:15 | blok prezentacji / inspiracji | 15m
+- 9:30 | instalacja / pierwsze koty za płoty | 30m
+- 10:00 | blok praktyki | 1h
+- 11:00 | blok prezentacji / inspiracji | 15m
+- 11:15 | przerwa | 15m
+- 11:30 | blok prezentacji / inspiracji | 15m
+- 11:45 | blok praktyki | 1h
+- 12:45 | obiad | 1h
+- 13:45 | blok prezentacji / inspiracji | 15m
+- 14:00 | blok praktyki | 1h
+- 15:00 | Go home and drink
