@@ -4,6 +4,7 @@ var year = new Date().toDateString().split(' ')[3];
 var projectDescription = document.querySelector('#user_field').innerText;
 var phoneNumber, clientName;
 var projectTitle = document.querySelector('.cardOrderName').innerText;
+var projectLink = location.href;
 
 pubsub.subscribe('cardactions:contentloaded', function() {
   let contactDetails = (Array.from(
@@ -17,6 +18,7 @@ pubsub.subscribe('cardactions:contentloaded', function() {
     JSON.stringify({
       clientName,
       phoneNumber,
+      projectLink,
       projectTitle,
       projectDescription
     })
