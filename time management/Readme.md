@@ -9,6 +9,7 @@
 * trello
 * onenote
 * notion.so
+* zenkit
 
 # long term
 * plan next day, week, month, quarter, year, 5 years
