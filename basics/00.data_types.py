@@ -27,3 +27,13 @@ studentka = {
         "wiek" : 20,
         "zainteresowania": ["dyskoteki", "chłopaki", "ogólnie takie takie", "ale w miarę to nauka mnie najbardziej kręci"]
         }
+
+# compose / substitute, just like math:
+print(goscie[0])
+
+index = 0
+
+print(goscie[index]) # watch for correct "[", "("
+# [] is for a position within list, () is for calling functions or grouping expressions
+
+print(len(goscie[index]))
