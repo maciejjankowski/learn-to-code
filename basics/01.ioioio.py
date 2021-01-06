@@ -13,3 +13,6 @@ print("Hi! " + name)
 age = input("How old? ")
 
 print('oh,', age, 'is pretty old')
+
+
+# Assignment: ask 3 people for their names, store those in the guest_list
