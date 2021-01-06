@@ -1,3 +1,14 @@
+name1 = input("Pls gib name: ")
+name2 = input("pls gib name: ")
+name3 = input("Pls gib name: ")
+goscie = [name1, name2, name3]
+
+
+
+for i in range(3):
+    print(i, " hip!")
+print("hurray!")
+
 name = input("Pls gib name ")
 
 if name == 'Adam':
