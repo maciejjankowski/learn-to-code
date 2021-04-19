@@ -7,3 +7,6 @@
 * live coding
 * coding dojo
 * instalacja rzeczy
+
+
+Muzyka - launchpad, loops, ableton 
