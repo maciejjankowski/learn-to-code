@@ -4,3 +4,4 @@
 3. chrome developer tools
 4. jsbin.com
 
+tutaj powinien byc link do filmu na yt
