@@ -1,3 +1,6 @@
+Pobaw się tym, żeby się oswoić (1h):
+https://app.pickcode.io/lessons
+
 Jak zacząć:
 https://github.com/maciejjankowski/learn-to-code/wiki/Jumpstart
 
